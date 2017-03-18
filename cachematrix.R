@@ -1,7 +1,18 @@
-## Put comments here that give an overall description of what your
-## functions do
+## Caching the Inverse of a Matrixless 
+Matrix inversion is usually a costly computation
 
-## Write a short comment describing this function
+##As this process is repititive it could be beneficial to caching the inverse rather than computing it every time the function is call
+
+
+##The goal of MakeCacheMatrix is to
+##set the value of the matrix 
+##get the vaule of the matrix
+##set/compute the value of the matrix 
+##get the value of the matrix
+
+
+##MakeCacheMatrix This function creates a special "matrix" object that can cache its inverse.
+
 
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL
@@ -11,7 +22,7 @@ makeCacheMatrix <- function(x = matrix()) {
         }
         
         get <-function()x
-        setinverse <- function(Solve) m <<- solve
+        setinverse <- function(solve) m <<- solve
         getinverse <- function() m
         list(set = set, get = get, 
              setinverse = setinverse,
@@ -20,9 +31,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 
+##cachesolveThe function computes the inverse of the special matrix returned by the MakeCacheMatrix function, but first the function checks to see if the inverse is present or not, if its absent it computes the inverse and sets the value of the cache.
 
-
-## Write a short comment describing this function
 
 
 cachesolve <- function(x, ...) {
