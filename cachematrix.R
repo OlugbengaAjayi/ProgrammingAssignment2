@@ -1,5 +1,4 @@
-## Caching the Inverse of a Matrixless 
-Matrix inversion is usually a costly computation
+## Caching the Inverse of a Matrixless Matrix inversion is usually a costly computation
 
 ##As this process is repititive it could be beneficial to caching the inverse rather than computing it every time the function is call
 
